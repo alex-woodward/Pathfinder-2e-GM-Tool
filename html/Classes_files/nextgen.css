@@ -1,0 +1,504 @@
+html body {
+  padding-top: 40px !important;
+}
+html body.logged-in {
+  padding-top: 80px !important;
+}
+body > .container-fluid {
+  margin-top: 20px;
+}
+@media (min-width: 330px) {
+  body {
+    padding-top: 60px;
+  }
+}
+/* divs pulled left need a 20px right and bottom margin */
+div.pull-left {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+/* ensure sidebar-inline clears floats */
+div.sidebar-inline {
+  clear: both;
+}
+/* ensure everything fits inside divs */
+div {
+  word-wrap: break-word;
+}
+div.widget {
+  border: none;
+}
+/* make the admin bar work in nextgen */
+nav #wpadminbar {
+  position: relative;
+}
+/* mobile tweaks */
+@media screen and (max-width: 767px) {
+  /*product div */
+  div.product-left {
+    float: none;
+  }
+  /* toc */
+  #toc_container {
+    width: 100% !important;
+    float: none !important;
+  }
+  /* always clear floats */
+  article p,
+  article h1,
+  article h2,
+  article h3,
+  article h4 {
+    clear: both;
+  }
+}
+/* Ensure Admin Bar doesn't go wonky with extra items on mobile */
+@media screen and (max-width: 470px) {
+  div#wpadminbar li#wp-admin-bar-wpseo-menu {
+    visibility: collapse;
+    display: none;
+  }
+}
+/* Make sure Dropdowns are always on top */
+.dropdown-menu {
+  z-index: 100000;
+}
+/* Prevent footer-nav aside from overflowing */
+aside.footer-nav {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+/* Fixes for dropdowns in asides */
+aside .btn-group-vertical {
+  width: 100%;
+}
+aside .dropdown-menu {
+  max-width: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+aside .dropdown-menu a {
+  white-space: normal;
+}
+aside .open > .dropdown-menu {
+  margin-left: 10px;
+}
+aside .btn {
+  text-align: left;
+}
+aside button.dropdown-toggle span.caret {
+  margin-left: 5px;
+}
+/*Support for Dropdown submenus*/
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  -webkit-border-radius: 0 6px 6px 6px;
+  -moz-border-radius: 0 6px 6px 6px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu > a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover > a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left > .dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  -webkit-border-radius: 6px 0 6px 6px;
+  -moz-border-radius: 6px 0 6px 6px;
+  border-radius: 6px 0 6px 6px;
+}
+/* Ensure edit links go beneath any floated content */
+div.article-edit-link {
+  clear: both;
+}
+/* Scrolling wrapper for tables */
+div.tablewrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+/* "Scroll to top" button */
+#top-link-block.affix-top {
+  position: absolute;
+  /* allows it to "slide" up into view */
+  bottom: -82px;
+  /* negative of the offset - height of link element */
+  left: 10px;
+  /* padding from the left side of the window */
+}
+#top-link-block.affix {
+  position: fixed;
+  /* keeps it on the bottom once in view */
+  bottom: 18px;
+  /* height of link element */
+  left: 10px;
+  /* padding from the left side of the window */
+}
+#top-link-block {
+  z-index: 9999;
+  border-top: initial;
+}
+/* Less padding on subpage nav menu */
+.list-group-item {
+  padding: 5px 10px;
+}
+/* navbar search box should have a right margin */
+div#navbar form.search {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+/* Ensure there's no overflow on the sidebars */
+/* aside
+{
+    overflow:hidden;
+} */
+/* on really wide screens, float the sidebars and set a maximum width */
+@media (min-width: 1200px) {
+  aside.sidebar-left {
+    float: right;
+  }
+  aside.sidebar-right {
+    float: left;
+  }
+  aside.sidebar-left,
+  aside.sidebar-right {
+    max-width: 200px;
+  }
+}
+/* Responsive ad div */
+.responsive-ad-contentarea {
+  text-align: center;
+  width: 100% !important;
+  overflow: hidden;
+  background: white;
+  margin: auto;
+}
+@media (min-width: 768px) {
+  .responsive-ad-contentarea {
+    width: 468px;
+    height: 115px;
+  }
+}
+@media (min-width: 992px) {
+  .responsive-ad-contentarea {
+    width: 468px;
+    height: 115px;
+  }
+}
+@media (min-width: 1200px) {
+  .responsive-ad-contentarea {
+    width: 720px;
+    height: 115px;
+  }
+}
+@media (min-width: 1500px) {
+  .responsive-ad-contentarea {
+    width: 960px;
+    height: 120px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* Youtube Responsive Container */
+  .youtube-responsive-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+  }
+  .youtube-responsive-container iframe,
+  .youtube-responsive-container object,
+  .youtube-responsive-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+/* ensure table headers are black in filtering dropdowns */
+article table:not(.sites-layout-hbox) thead .dropdown-filter-item,
+table:not(.sites-layout-hbox) th .dropdown-filter-item {
+  color: #000000;
+}
+/* table cell align */
+article table td {
+  text-align: left;
+  vertical-align: top;
+}
+/* flexboxes */
+main article div.flexbox {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+}
+main article div.flexbox > div {
+  flex: 1;
+  min-width: 250px;
+}
+/* Editor notes */
+div.ed-note-outer {
+  border: solid thin;
+  border-color: #4d64af;
+  margin: 20px;
+}
+p.ed-note-header {
+  background-color: #4d64af;
+  padding: 5px;
+  color: #ffffff;
+  font-weight: bold;
+}
+div.ed-note-txt {
+  padding: 5px;
+  font-size: 12px;
+}
+article div.faq,
+article div.widefaq,
+article div.content-sidebar,
+article div.content-wide,
+article div.custom-content {
+  font-size: 14px;
+  border: solid thin;
+  border-color: #999999;
+  background-color: #ffffff;
+  box-shadow: 10px 10px 5px #888888;
+  margin: 0 20px 15px 20px;
+  overflow-x: auto;
+}
+article div.info-sidebar {
+  font-size: 14px;
+  border: thin solid #999999;
+  background-color: #f5f4d2;
+  box-shadow: 10px 10px 5px #888888;
+  margin: 0 20px 15px 20px;
+}
+article div.faq {
+  float: left;
+  clear: left;
+  width: 320px;
+}
+main article div.faq.right {
+  float: right;
+  clear: right;
+}
+article div.widefaq,
+article div.content-wide {
+  display: block;
+  overflow-x: auto;
+}
+article div.content-sidebar,
+article div.info-sidebar {
+  float: right;
+  width: 320px;
+}
+article.div.content-sidebar.canwait,
+article div.info-sidebar.canwait {
+  clear: right;
+}
+article div.faq > div,
+article div.widefaq > div,
+article div.content-sidebar > div,
+article div.content-wide > div,
+article div.custom-content > div,
+article div.info-sidebar > div {
+  padding: 5px;
+}
+article div.faq > div:empty,
+article div.widefaq > div:empty,
+article div.content-sidebar > div:empty,
+article div.content-wide > div:empty,
+article div.custom-content > div:empty,
+article div.info-sidebar > div:empty {
+  visibility: collapse;
+}
+article div.custom-content > div {
+  background-color: #f5f4d2;
+}
+article div.faq > div:first-of-type,
+article div.widefaq > div:first-of-type,
+article div.content-sidebar > div:first-of-type,
+article div.content-wide > div:first-of-type,
+article div.info-sidebar > div:first-of-type,
+article div.custom-content > div:first-of-type {
+  font-weight: bold;
+  padding: 5px;
+}
+article div.custom-content > div:first-of-type {
+  background-color: #f1a708;
+}
+article div.info-sidebar > div:first-of-type {
+  background-color: #f1a708;
+}
+article div.faq > div:first-of-type,
+article div.widefaq > div:first-of-type {
+  background-color: #ea9999;
+}
+article div.content-sidebar > div:first-of-type,
+article div.content-wide > div:first-of-type {
+  background-color: #d9d2e9;
+}
+/* tables should look nice on any screen size */
+div.table-wrapper {
+  overflow-x: auto;
+  /* screens less than 800px get special resizing */
+}
+@media only screen and (max-width: 800px) {
+  div.table-wrapper {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 800px) and (max-height: 400px) {
+  div.table-wrapper {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+}
+@media only screen and (max-width: 800px) and (min-height: 401px) and (max-height: 600px) {
+  div.table-wrapper {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+}
+@media only screen and (max-width: 800px) and (min-height: 601px) and (max-height: 800px) {
+  div.table-wrapper {
+    max-height: 500px;
+    overflow-y: auto;
+  }
+}
+@media only screen and (max-width: 800px) and (min-height: 801px) and (max-height: 1024px) {
+  div.table-wrapper {
+    max-height: 700px;
+    overflow-y: auto;
+  }
+}
+@media only screen and (max-width: 800px) and (min-height: 1025px) {
+  div.table-wrapper {
+    max-height: 700px;
+    overflow-y: auto;
+  }
+}
+/* Section 15 Boxes */
+div.section15 {
+  color: #000;
+  font-size: 12px;
+  border: 1px solid #b0bdcc;
+  display: table;
+  width: 100%;
+}
+div.section15 > :first-child {
+  font-size: 18px;
+  background-color: #eeeeee;
+  font-weight: bold;
+  margin: 0;
+  padding: 4px;
+}
+div.section15 > :nth-child(2) {
+  padding: 10px;
+  font-size: 12px;
+  font-style: italic;
+}
+div.section15 > div {
+  padding: 4px;
+}
+/* Table Zoomer */
+div#tablezoomer {
+  position: fixed;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  padding: 2px;
+  background: black;
+  z-index: 100000;
+}
+div#tablezoomer #tablezoomer-inner {
+  position: absolute;
+  top: 26px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  padding: 2px;
+  background: white;
+  overflow: auto;
+}
+div#tablezoomer #tablezoomer-closebutton {
+  position: absolute;
+  top: 2px;
+  right: 4px;
+  width: 22px;
+  height: 22px;
+  color: white !important;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: right;
+}
+a.tablezoomer-link {
+  font-size: 12px;
+  top: 10px;
+  position: relative;
+}
+/* stop anchors happening under the toolbars */
+:target::before {
+  content: "";
+  display: block;
+  height: 300px;
+  margin: -270px 0 0;
+}
+span[id] {
+  position: relative;
+  border-top: 152px solid transparent;
+  margin: -30px 0 0;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  z-index: 0;
+}
+aside.sidebar-left span[id] {
+  border-top: initial;
+  margin: initial;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow: hidden;
+}
+.right-sidebar .widget {
+  max-width: 160px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 0;
+  padding-left: 0;
+}
+.shopify-buybutton-left {
+  float: left;
+}
+.shopify-buybutton-right {
+  float: right;
+}
+/*# sourceMappingURL=nextgen.css.map */
