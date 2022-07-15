@@ -24,6 +24,7 @@ def filepicker(file_type, fileDir):
             # returns list of files in directory
     return sheet_lst
 # This could probably eat some lines from csvwriter for posterity
+# This is being pulled AFTER the text prompt for some reason.
 
 
 def csvwriter(mosaic):
